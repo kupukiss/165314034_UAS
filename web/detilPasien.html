@@ -78,7 +78,7 @@ and open the template in the editor.
                 text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
             }
         </style>
-        <title>UAS | Cari Nama Pasien</title>
+        <title>UAS | Detil Pasien</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -94,7 +94,7 @@ and open the template in the editor.
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <h1><font face="Century Gothic" color=white size="6">Cari Nama Pasien</font></h1>
+                    <h1><font face="Century Gothic" color=white size="6">Detil Pasien</font></h1>
                     <br>
                     <input type="text" placeholder="Nama" id="nama" required>
                     <button type="button" onclick="loadDoc()" id="btn"><font face="Century Gothic" size="3">OK</font></button>
@@ -109,7 +109,7 @@ and open the template in the editor.
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
-                         document.getElementById("demo").innerHTML = loopingList(this.responseText);
+                        loopingList(this.responseText);
                     }
                 }
                 xmlhttp.open("GET", url, true);
