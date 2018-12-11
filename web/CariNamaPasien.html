@@ -88,7 +88,7 @@ and open the template in the editor.
     <body style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/e/e9/WHO_flag.png)">
 
         <div class="jumbotron text-center">
-            <a href="../index.html" style="text-decoration: none"><font color="white"><b>RS </b></font><font color="#63E842">WHO</font><font color="white"><b>?</b></font></a>
+            <a href="../index.html" style="text-decoration: none"><font color="white"><b>RS </b></font><font color="#63E842">UAS</font><font color="white"><b>?</b></font></a>
         </div>
 
         <div class="container">
@@ -97,24 +97,9 @@ and open the template in the editor.
                     <div class="col-sm-4">
                         <h1><font face="Century Gothic" color=white size="6">Cari Nama Pasien</font></h1>
                         <br>
-
-                        <input type="text" placeholder="No RM" id="noRm" required>
+                        <input type="text" placeholder="Nama" id="nama" required>
                         <button type="button" onclick="loadDoc()" id="btn"><font face="Century Gothic" size="3">OK</font></button>
-
                         <br><br>
-                        <input type="text" placeholder="Nama" disabled id="nama" required>
-                        <input type="text" placeholder="Alamat" disabled id="alamat" required><br>
-                        <i>*otomatis berdasarkan No RM</i>
-                        <br><br>
-                        <font face="Century Gothic" color=white size="3">Tanggal Berobat : </font><br>
-                        <input type="date" id="tanggal" required>
-                        <br><br>
-                        <font face="Century Gothic" color=white size="3">Klinik : </font><br>
-                        <select name="namaKlinik" id="namaKlinik" required>
-                            <option value="Mata">Mata</option> 
-                            <option value="Saraf">Saraf</option>
-                            <option value="Saraf">Gigi</option>
-                        </select>
                         <br><br>
                     </div>
                     <div class="col-sm-4">
@@ -127,7 +112,7 @@ and open the template in the editor.
         <p id="output"></p>
         <script>
             function loadDoc() {
-                var url = "http://202.94.83.190:8080/165314034_Platform_rsku_webservice/webresources/pasien/getPasien?noRm=" + noRm.value;
+                var url = "http://206.189.38.188:8080/myrs/webresources/pasien/cariNamaPasien?nama=" + nama.value;
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("GET", url, true);
                 xhttp.send();
